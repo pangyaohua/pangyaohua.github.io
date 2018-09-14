@@ -27,6 +27,8 @@ import indexSheet from "./assets/css/index.css"
 
 //引入本地阿里图标
 import "./assets/iconfont/iconfont.css"
+//--二次引入阿里图标
+import "./assets/icon/iconfont.css"
 
 Vue.prototype.$echarts = echarts
 Vue.config.productionTip = false

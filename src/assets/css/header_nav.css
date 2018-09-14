@@ -3,6 +3,10 @@ html {
   width: 100%;
   height: 100%;
 }
+#main {
+  overflow: hidden;
+  overflow-x: hidden;
+}
 header {
   width: 100%;
   height: 1.257142rem;
@@ -80,26 +84,33 @@ footer ul .active span {
 }
 .searchBox {
   width: 100%;
-  height: 1.4rem;
   background: #fff;
-  line-height: 1.4rem;
   text-align: center;
-  position: relative;
+  padding: 0.214285rem 0;
 }
-.searchBox input {
+.searchBox .input_box {
   display: inline-block;
   height: 0.771428rem;
   width: 95%;
+  position: relative;
+}
+.searchBox .input_box input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
   border-radius: 0.142857rem;
   background: #edeef0;
   bordeR: none;
   text-align: center;
 }
-.searchBox span {
+.searchBox .input_box span {
   position: absolute;
-  left: 42%;
+  left: 41%;
+  top: 12%;
 }
-.searchBox .searchSpan {
+.searchBox .input_box .searchSpan {
   left: 25%;
 }
 section {
@@ -110,6 +121,163 @@ section {
 }
 section::-webkit-scrollbar {
   display: none;
+}
+.messagedEATL {
+  width: 100%;
+  height: 100%;
+  background: #ecedf1;
+  display: -webkit-flex;
+  flex-direction: column;
+}
+.messagedEATL .message_header {
+  height: 1.257142rem;
+  width: 100%;
+  text-align: center;
+  line-height: 1.257142rem;
+  position: relative;
+  color: #000;
+  border-bottom: 1px solid #d6d7db;
+}
+.messagedEATL .message_header h1 {
+  width: 100%;
+  height: 100%;
+  line-height: 1.257142rem;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.messagedEATL .message_header span {
+  position: absolute;
+  left: 0.357142rem;
+  z-index: 10;
+}
+.messagedEATL .message_header i {
+  position: absolute;
+  right: 0.357142rem;
+}
+.messagedEATL .message_header .icon-iconset0214 {
+  right: 1.142857rem;
+}
+.messagedEATL .message_section {
+  -webkit-flex: 1;
+  overflow-y: scroll;
+}
+.messagedEATL .message_section .left dl,
+.messagedEATL .message_section .right dl {
+  width: 100%;
+  padding: 0.428571rem 0.214285rem;
+  height: auto;
+  float: right;
+  display: -webkit-flex;
+}
+.messagedEATL .message_section .left dl dt,
+.messagedEATL .message_section .right dl dt {
+  width: 1.142857rem;
+  height: 1.142857rem;
+  border-radius: 50%;
+  overflow: hidden;
+  float: right;
+}
+.messagedEATL .message_section .left dl dt img,
+.messagedEATL .message_section .right dl dt img {
+  width: 100%;
+  height: 100%;
+}
+.messagedEATL .message_section .left dl dd,
+.messagedEATL .message_section .right dl dd {
+  -webkit-flex: 1;
+  float: right;
+  padding-left: 0.214285rem;
+  padding-right: 2%;
+}
+.messagedEATL .message_section .left dl dd p,
+.messagedEATL .message_section .right dl dd p {
+  text-align: left;
+  padding: 0.114285rem 0;
+  padding-left: 0.114285rem;
+}
+.messagedEATL .message_section .left dl dd span,
+.messagedEATL .message_section .right dl dd span {
+  display: inline-block;
+  padding: 0.285714rem 0.142857rem;
+  border-radius: 0.285714rem;
+  background: #fff;
+  position: relative;
+}
+.messagedEATL .message_section .right dl dd {
+  padding-left: 2%;
+  text-align: right;
+  padding-right: 0.214285rem;
+}
+.messagedEATL .message_section .right dl dd p {
+  text-align: right;
+}
+.messagedEATL .message_footer {
+  width: 100%;
+  height: 2.371428rem;
+  display: -webkit-flex;
+  flex-direction: column;
+}
+.messagedEATL .message_footer input {
+  display: block;
+  width: 95%;
+  padding: 0.142857rem 0;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 0.071428rem;
+  color: #000;
+}
+.messagedEATL .message_footer .img_box {
+  width: 100%;
+  -webkit-flex: 1;
+}
+.messagedEATL .message_footer .img_box img {
+  width: 100%;
+  height: 100%;
+}
+.add_box_container {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 1.285714rem;
+  right: 0;
+  z-index: 10;
+  text-align: right;
+}
+.add_box_container .add_box_content {
+  width: 100%;
+}
+.add_box_container .add_box {
+  position: relative;
+  width: 32%;
+  margin-left: 66%;
+  height: auto;
+  background: #fff;
+}
+.add_box_container .add_box ul {
+  border-radius: 0.428571rem;
+  background: #fff;
+}
+.add_box_container .add_box ul li {
+  width: 100%;
+  padding: 0.142857rem 0 0.142857rem 0.214285rem;
+  text-align: left;
+  border-bottom: 1px solid #fafafa;
+}
+.add_box_container .add_box ul li:nth-last-child {
+  border: none;
+}
+.add_box_container .sanjiao_up {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 0.20rem solid transparent;
+  border-right: 0.20rem solid transparent;
+  border-bottom: 0.20rem solid #fff;
+  top: -0.2rem;
+  right: 1.5%;
 }
 .message {
   width: 100%;
@@ -127,6 +295,7 @@ section::-webkit-scrollbar {
   display: -webkit-flex;
   padding: 0.228571rem 0.342857rem;
   background: #fff;
+  color: #000;
 }
 .message dl dt {
   width: 1.428571rem;

@@ -10,7 +10,11 @@ const state = {
 	placeholderText: "搜索",
 	//--动态页面，设置放大镜位置--
 	isSearchSpan: false,
+	//--消息界面，设置点击加号，add_box盒子的显示和隐藏--
+	IsShow_addBox:false,
 	//消息列表的信息，重要重要--引入图片时需用require,?否则图片路径不对
+	//控制头部-searchBox-footer的框,
+	enterERJI:true,
 	messageList: [{
 			title: "往后余生",
 			time: "下午03:34",

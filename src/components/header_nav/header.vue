@@ -1,5 +1,5 @@
 <template>
-	<header>
+	<header v-if="$store.state.enterERJI">
 		<!--header标题，复用性高-->
 		<ul>
 			<!--左边部分的头像-->
@@ -15,7 +15,7 @@
 				<!--<span class="add_span" v-show="$route.path=='/message'">+</span>
 				<span v-show="$route.path=='/people'">添加</span>
 				<span v-show="$route.path='/state'">更多</span>-->
-				<span class="add_span iconfont icon-tianjiajiahaowubiankuang" v-show="$store.state.pageName=='消息'"></span>
+				<span class="add_span iconfont icon-tianjiajiahaowubiankuang" v-show="$store.state.pageName=='消息'" @click="$store.commit('setAddBox')"></span>
 				<span v-show="$store.state.pageName=='联系人'">添加</span>
 				<span v-show="$store.state.pageName=='动态'">更多</span>
 			</li>

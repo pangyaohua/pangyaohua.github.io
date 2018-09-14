@@ -8,20 +8,23 @@
 						{{friend.number}}
 					</em>
 				</li>
-				<dl v-for="friendList in friend.friendArr" v-show="friend.className">
-					<dt>
+				<router-link :to="{name:'messageDetail',params:{userId:friendList.name,userImg:friendList.imgSrc}}" v-for="(friendList,index) in friend.friendArr" v-show="friend.className" :key="index">
+					<dl>
+						<dt>
 						<img v-bind:src="friendList.imgSrc" alt="" />
 					</dt>
-					<dd>
-						<p>
-							{{friendList.name}}
+						<dd>
+							<p>
+								{{friendList.name}}
 
-						</p>
-						<p>
-							{{friendList.content}}
-						</p>
-					</dd>
-				</dl>
+							</p>
+							<p>
+								{{friendList.content}}
+							</p>
+						</dd>
+					</dl>
+				</router-link>
+
 			</ul>
 
 		</div>

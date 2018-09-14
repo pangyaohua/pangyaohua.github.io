@@ -2,7 +2,8 @@
 	<div id="main">
 		<!--头部信息-->
 		<header-nav></header-nav>
-
+		<!---message页面点击加号显示的添加框-->
+		<add-box></add-box>
 		<section>
 			<!--搜索框-->
 			<search-box></search-box>
@@ -16,11 +17,18 @@
 </template>
 
 <script>
+	//--引入头部导航--
 	import headerNav from './components/header_nav/header'
+	//--引入底部导航--
 	import footerNav from "./components/footer_nav/footer"
+	//--引入搜索框--
 	import searchBox from "./components/searchBox/searchBox"
+	//--引入mixinjs--
 	import mixin from "./vuex/mixin.js"
 	window.mixin = mixin
+	//--引入点击加号展示的弹出框--
+	import addBox from "./components/add_box/add_box"
+	
 	$(function() {
 		console.log("引入jquery成功");
 	})
@@ -33,7 +41,8 @@
 		components: {
 			headerNav,
 			footerNav,
-			searchBox
+			searchBox,
+			addBox
 		},
 		watch: {
 			// 监听 $route 为店内页设置不同的过渡效果

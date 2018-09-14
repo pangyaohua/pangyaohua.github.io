@@ -1,6 +1,6 @@
 <template>
 	<!--底部导航-->
-	<footer>
+	<footer v-if="$store.state.enterERJI">
 		<ul>
 			<router-link to="/">
 				<li :class="{active:$store.state.pageName=='消息'}" @click="$store.commit('setSearchPlaceholder','搜索')">
