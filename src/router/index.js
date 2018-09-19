@@ -13,13 +13,25 @@ export default new Router({
 			component: message,
 			children: [
 
-				{ path: "/", component: message, name: "消息" }
+				{ path: "/message", component: message, name: "消息" }
 
 			]
 		},{
-			path: "/messageDetail/:id",
-			component: messageDetail,
-			name: "messageDetail"
+			path: '/message',
+			name: 'message',
+			component: message,
+			children: [
+
+				{ path: "/message", component: message, name: "消息" }
+
+			]
+		},{
+			path: "/message/messageDetail",
+			name: "messageDetail",
+			components:{
+				"detail":messageDetail
+			}
+			
 		}, {
 			path: '/DT',
 			name: 'DT',

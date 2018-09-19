@@ -8,7 +8,7 @@
 						{{friend.number}}
 					</em>
 				</li>
-				<router-link :to="{name:'messageDetail',params:{userId:friendList.name,userImg:friendList.imgSrc}}" v-for="(friendList,index) in friend.friendArr" v-show="friend.className" :key="index">
+				<router-link :to="{path:'/message/messageDetail',query:{userId:friendList.name,userImg:friendList.imgSrc}}" v-for="(friendList,index) in friend.friendArr" v-show="friend.className" :key="index">
 					<dl>
 						<dt>
 						<img v-bind:src="friendList.imgSrc" alt="" />

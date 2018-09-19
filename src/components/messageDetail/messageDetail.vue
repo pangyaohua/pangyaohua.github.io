@@ -5,7 +5,7 @@
 				
 			</span>
 			<h1>
-				{{$route.params.userId}}
+				{{$route.query.userId}}
 			</h1>
 			<i class="iconfont icon-lianxiren">
 				
@@ -18,7 +18,7 @@
 			<div class="left">
 				<dl>
 					<dt>
-						<img v-bind:src="$route.params.userImg" alt="" />
+						<img v-bind:src="$route.query.userImg" alt="" />
 						
 					</dt>
 					<dd>
@@ -65,8 +65,7 @@
 		methods: {
 
 			back_home() {
-				//--设置头部可见，且回到上一页
-				this.$store.commit('setEnterERJI', true)
+				//回到上一页
 				this.$router.go(-1);
 			},
 			open() {
@@ -75,7 +74,7 @@
 		},
 		//--进行初始化数据，一般用于渲染页面之后请求数据
 		created() {
-			this.$store.commit('setEnterERJI', false)
+			
 		},
 		watch: {
 			"$route" (to, from) {

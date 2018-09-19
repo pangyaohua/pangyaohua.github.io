@@ -1,7 +1,7 @@
 <template>
 	<div class="message">
 
-		<router-link :to="{name:'messageDetail',params:{userId:message.title,userImg:message.imgSrc}}" v-for="(message,index) in messageList" :key="index">
+		<router-link :to="{path:'/message/messageDetail',query:{userId:message.title,userImg:message.imgSrc}}" v-for="(message,index) in messageList" :key="index">
 			<dl :class="message.className">
 				<dt>
 				<img v-bind:src="message.imgSrc" alt="" />
